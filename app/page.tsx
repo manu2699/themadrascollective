@@ -10,6 +10,10 @@ const tagLines = [
     strike: "Experience",
     over: "Entertainment"
   },
+  {
+    strike: "Consumption",
+    over: "Connection"
+  }
 ]
 
 export default function Home() {
@@ -26,10 +30,7 @@ export default function Home() {
         {/* Manifesto Section */}
         <section id="manifesto" className="grid grid-cols-1 gap-8 border-b border-border py-24 md:grid-cols-12">
           <div className="md:col-span-8">
-            <h1 className="animate-reveal font-display text-5xl sm:text-6xl uppercase leading-[0.85] tracking-tighter md:text-8xl">
-              Music is the <br /> protagonist.
-            </h1>
-            <div className="flex gap-16 align-center mt-2">
+            <div className="flex gap-16 align-center mb-4">
               {tagLines.map((line, idx) => (
                 <div key={idx} className="flex flex-row gap-1 align-center">
                   <span
@@ -49,19 +50,15 @@ export default function Home() {
                 </div>
               ))}
             </div>
+            <h1 className="animate-reveal font-display text-5xl sm:text-6xl uppercase leading-[0.85] tracking-tighter md:text-8xl">
+              Music is the <br /> protagonist.
+            </h1>
             <p
-              className="animate-reveal mt-6 max-w-lg text-pretty text-xl leading-relaxed"
-              style={{ animationDelay: "100ms" }}
-            >
-              {/* We are here to curate intimate musical concerts that connect us all through music, stories and shared silence. */}
-              In a world of noise and performance, we return to what matters most: the music.
-            </p>
-            <p
-              className="animate-reveal mt-6 max-w-md text-pretty text-sm text-muted-foreground"
+              className="animate-reveal mt-8 max-w-md text-pretty text text-muted-foreground"
               style={{ animationDelay: "150ms" }}
             >
               {/* We facilitate the hush before the first note. In a culture of consumption, we curate meaningful intersections between artist and listener in Chennai. No hype. No spectacle. Just sound. */}
-              Our concerts are intimate, thoughtful experiences, free from unnecessary theatrics and spectacle.
+              We create intimate, meaningful concerts that celebrate artistic expression, storytelling and human connection over spectacle and production.
             </p>
           </div>
           <div
@@ -83,7 +80,6 @@ export default function Home() {
             <h2 className="font-mono text-xs uppercase tracking-widest text-muted-foreground">Madras Sessions</h2>
             <span className="font-mono text-[10px] text-muted-foreground">[Scroll to explore]</span>
           </div>
-
           <div>
             {COLLECTIONS.map((item, index) => {
               const delay = 300 + index * 100;
@@ -145,7 +141,7 @@ export default function Home() {
         </section>
 
         {/* Collaborate Section */}
-        <section id="collaborate" className="grid grid-cols-1 gap-12 py-24 md:grid-cols-12">
+        <section id="collaborate" className="animate-reveal grid grid-cols-1 gap-12 py-24 md:grid-cols-12">
           <div className="md:col-span-5">
             <img
               src="/assets/artist-invite.jpg"
@@ -158,17 +154,25 @@ export default function Home() {
           </div>
           <div className="flex flex-col justify-center md:col-span-7">
             {/* <span className="mb-6 font-mono text-xs uppercase text-accent">Artist Registry</span> */}
+            <p
+              className="mb-4 max-w-lg text-pretty text-lg text-muted-foreground"
+              style={{ animationDelay: "100ms" }}
+            >
+              {/* We are here to curate intimate musical concerts that connect us all through music, stories and shared silence. */}
+              In a world of noise and performance, we return to what matters most: the music.
+            </p>
+
             <h2 className="mb-8 font-display text-5xl uppercase tracking-tighter">Want to collaborate with us?</h2>
             <p className="mb-12 max-w-xl text-pretty text-lg text-muted-foreground">
-              We are looking for performers who prioritize depth over volume. If you are exploring the edges of sound, synthesis, or traditional reimagining, we invite you to start a dialogue. The room is small. The intent is large.
+              We are looking for performers who prioritize depth over volume. Whether you are an artist, a listener, or a curious collaborator. We read every message. The room is small, but the conversation is wide.
             </p>
             <a
-              href="mailto:hello@madrascollective.in?subject=Artist%20Registry%20—%20MC-99"
+              href="/contact"
               className="group flex items-center gap-4"
             >
-              <a href="/contact" className="bg-foreground px-8 py-4 font-mono text-sm uppercase tracking-widest text-background transition-colors group-hover:bg-accent">
+              <div className="bg-foreground px-8 py-4 font-mono text-sm uppercase tracking-widest text-background transition-colors group-hover:bg-accent">
                 Connect with the Collective
-              </a>
+              </div>
               {/* <span className="font-mono text-xs text-muted-foreground underline decoration-accent underline-offset-4 transition-colors group-hover:text-foreground">
                 Entry Form MC-99
               </span> */}
