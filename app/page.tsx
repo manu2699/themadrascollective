@@ -1,6 +1,17 @@
 import Link from "next/link";
 import { COLLECTIONS } from "./data/events";
 
+const tagLines = [
+  {
+    strike: "Attention",
+    over: "Artistry"
+  },
+  {
+    strike: "Experience",
+    over: "Entertainment"
+  },
+]
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -18,6 +29,26 @@ export default function Home() {
             <h1 className="animate-reveal font-display text-5xl sm:text-6xl uppercase leading-[0.85] tracking-tighter md:text-8xl">
               Music is the <br /> protagonist.
             </h1>
+            <div className="flex gap-16 align-center mt-2">
+              {tagLines.map((line, idx) => (
+                <div key={idx} className="flex flex-row gap-1 align-center">
+                  <span
+                    key={'strike' + idx}
+                    className="animate-reveal leading-relaxed line-through"
+                    style={{ animationDelay: "100ms" }}
+                  >
+                    {line.strike}
+                  </span>
+                  <span
+                    className="animate-reveal leading-relaxed"
+                    style={{ animationDelay: "100ms" }}
+                  >
+                    {line.over}.
+                  </span>
+
+                </div>
+              ))}
+            </div>
             <p
               className="animate-reveal mt-6 max-w-lg text-pretty text-xl leading-relaxed"
               style={{ animationDelay: "100ms" }}
@@ -49,7 +80,7 @@ export default function Home() {
         {/* Archive Section */}
         <section id="archive" className="py-12">
           <div className="mb-12 flex items-end justify-between">
-            <h2 className="font-mono text-xs uppercase tracking-widest text-muted-foreground">Madras Collections</h2>
+            <h2 className="font-mono text-xs uppercase tracking-widest text-muted-foreground">Madras Sessions</h2>
             <span className="font-mono text-[10px] text-muted-foreground">[Scroll to explore]</span>
           </div>
 
@@ -127,7 +158,7 @@ export default function Home() {
           </div>
           <div className="flex flex-col justify-center md:col-span-7">
             {/* <span className="mb-6 font-mono text-xs uppercase text-accent">Artist Registry</span> */}
-            <h2 className="mb-8 font-display text-5xl uppercase tracking-tighter">Shape the sound.</h2>
+            <h2 className="mb-8 font-display text-5xl uppercase tracking-tighter">Want to collaborate with us?</h2>
             <p className="mb-12 max-w-xl text-pretty text-lg text-muted-foreground">
               We are looking for performers who prioritize depth over volume. If you are exploring the edges of sound, synthesis, or traditional reimagining, we invite you to start a dialogue. The room is small. The intent is large.
             </p>
@@ -165,7 +196,7 @@ export default function Home() {
               <h4 className="mb-4 font-mono text-[10px] uppercase text-muted-foreground">Social</h4>
               <ul className="space-y-2 font-mono text-[11px] uppercase tracking-tight">
                 <li>
-                  <a href="https://instagram.com" target="_blank" rel="noreferrer" className="hover:text-accent">
+                  <a href="https://www.instagram.com/the_madras_collective_/" target="_blank" rel="noreferrer" className="hover:text-accent">
                     Instagram
                   </a>
                 </li>

@@ -47,7 +47,7 @@ export default async function VolumePage({ params }: PageProps) {
               href="/"
               className="group inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-tighter text-muted-foreground hover:text-accent"
             >
-              <span className="transition-transform group-hover:-translate-x-1">←</span> Back to Index
+              <span className="transition-transform group-hover:-translate-x-1">←</span> Back
             </Link>
           </div>
 
@@ -61,7 +61,7 @@ export default async function VolumePage({ params }: PageProps) {
                 {collection.title}
               </h1>
               <p className="mt-4 font-mono text-xs uppercase text-muted-foreground">
-                {collection.subtitle}
+                {collection.description}
               </p>
             </div>
             <div className="md:col-span-4 border-l border-border pl-6 flex flex-col justify-center gap-4">
@@ -186,13 +186,8 @@ export default async function VolumePage({ params }: PageProps) {
               <h4 className="mb-4 font-mono text-[10px] uppercase text-muted-foreground">Social</h4>
               <ul className="space-y-2 font-mono text-[11px] uppercase tracking-tight">
                 <li>
-                  <a href="https://instagram.com" target="_blank" rel="noreferrer" className="hover:text-accent">
+                  <a href="https://www.instagram.com/the_madras_collective_/" target="_blank" rel="noreferrer" className="hover:text-accent">
                     Instagram
-                  </a>
-                </li>
-                <li>
-                  <a href="https://soundcloud.com" target="_blank" rel="noreferrer" className="hover:text-accent">
-                    SoundCloud
                   </a>
                 </li>
               </ul>

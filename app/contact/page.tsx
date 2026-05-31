@@ -16,7 +16,7 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     try {
       const response = await fetch('/api/contact', {
         method: 'POST',
@@ -76,10 +76,10 @@ export default function Contact() {
               <div>
                 <h3 className="mb-3 font-mono text-[10px] uppercase text-muted-foreground">Direct Line</h3>
                 <a
-                  href="mailto:hello@madrascollective.in"
+                  href="mailto:themadrascollective3@gmail.com"
                   className="font-mono text-sm uppercase tracking-tight underline decoration-accent underline-offset-4 transition-colors hover:text-accent"
                 >
-                  hello@madrascollective.in
+                  themadrascollective3@gmail.com
                 </a>
               </div>
 
@@ -88,7 +88,7 @@ export default function Contact() {
                 <ul className="space-y-2 font-mono text-sm uppercase tracking-tight">
                   <li>
                     <a
-                      href="https://instagram.com"
+                      href="https://www.instagram.com/the_madras_collective_/"
                       target="_blank"
                       rel="noreferrer"
                       className="transition-colors hover:text-accent"
@@ -238,7 +238,7 @@ export default function Contact() {
               <h4 className="mb-4 font-mono text-[10px] uppercase text-muted-foreground">Social</h4>
               <ul className="space-y-2 font-mono text-[11px] uppercase tracking-tight">
                 <li>
-                  <a href="https://instagram.com" target="_blank" rel="noreferrer" className="hover:text-accent">
+                  <a href="https://www.instagram.com/the_madras_collective_/" target="_blank" rel="noreferrer" className="hover:text-accent">
                     Instagram
                   </a>
                 </li>
