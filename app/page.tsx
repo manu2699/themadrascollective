@@ -7,8 +7,8 @@ const tagLines = [
     over: "Artistry"
   },
   {
-    strike: "Experience",
-    over: "Entertainment"
+    strike: "Entertainment",
+    over: "Experience"
   },
   {
     strike: "Consumption",
