@@ -5,6 +5,7 @@ import Link from "next/link";
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -12,10 +13,31 @@ export default function Contact() {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Transmitting message:", formData);
-    setSubmitted(true);
+    setIsSubmitting(true);
+    
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+        // Reset form data optionally
+        setFormData({ name: "", email: "", subject: "", message: "" });
+      } else {
+        console.error("Failed to send message");
+        alert("Failed to send message. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error sending message:", error);
+      alert("An error occurred. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleInputChange = (
@@ -184,9 +206,10 @@ export default function Contact() {
 
                 <button
                   type="submit"
-                  className="bg-foreground px-8 py-4 font-mono text-sm uppercase tracking-widest text-background transition-colors hover:bg-accent cursor-pointer"
+                  disabled={isSubmitting}
+                  className="bg-foreground px-8 py-4 font-mono text-sm uppercase tracking-widest text-background transition-colors hover:bg-accent disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
                 >
-                  Transmit Message
+                  {isSubmitting ? "Transmitting..." : "Transmit Message"}
                 </button>
               </form>
             )}

@@ -26,7 +26,7 @@
 
 @theme {
   --font-sans: var(--font-inter);
-  --font-display: var(--font-anton);
+  --font-display: var(--font-inter);
   --font-mono: var(--font-jetbrains-mono);
 
   --color-background: var(--background);
@@ -35,7 +35,7 @@
   --color-accent-foreground: var(--accent-foreground);
   --color-border: var(--border);
   --color-muted-foreground: var(--muted-foreground);
-  
+
   --animate-reveal: tmc-slide-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
 
   @keyframes tmc-slide-up {
@@ -43,6 +43,7 @@
       opacity: 0;
       transform: translateY(20px);
     }
+
     100% {
       opacity: 1;
       transform: translateY(0);
