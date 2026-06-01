@@ -30,9 +30,9 @@ export default function Home() {
         {/* Manifesto Section */}
         <section id="manifesto" className="grid grid-cols-1 gap-8 border-b border-border py-24 md:grid-cols-12">
           <div className="md:col-span-8">
-            <div className="flex gap-16 align-center mb-4">
+            <div className="flex flex-wrap gap-2 sm:gap-8 md:gap-16 items-center mb-4">
               {tagLines.map((line, idx) => (
-                <div key={idx} className="flex flex-row gap-1 align-center">
+                <div key={idx} className="flex flex-row gap-1 items-center">
                   <span
                     key={'strike' + idx}
                     className="animate-reveal leading-relaxed line-through"
