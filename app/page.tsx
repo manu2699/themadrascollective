@@ -1,5 +1,9 @@
 import Link from "next/link";
 import { COLLECTIONS, UPCOMING_SESSIONS } from "./data/events";
+import StageIllustration from "./components/StageIllustration";
+import ReelToReelIllustration from "./components/ReelToReelIllustration";
+import MadrasSessionsIllustration from "./components/MadrasSessionsIllustration";
+import VinylListeningIllustration from "./components/VinylListeningIllustration";
 
 const tagLines = [
   {
@@ -70,9 +74,13 @@ export default function Home() {
             </p>
           </div>
           <div
-            className="animate-reveal flex flex-col items-end justify-end md:col-span-4"
+            className="animate-reveal flex flex-col items-end justify-between gap-8 md:col-span-4"
             style={{ animationDelay: "200ms" }}
           >
+            <div className="w-full flex items-center justify-center md:justify-end">
+              <ReelToReelIllustration />
+            </div>
+
             <div className="border-l border-border pl-4 text-right font-mono text-[11px] leading-relaxed">
               <a href="#manifesto" className="block hover:text-accent">(00) MANIFESTO</a>
               <a href="#what-we-do" className="block hover:text-accent">(01) WHAT WE DO</a>
@@ -157,6 +165,9 @@ export default function Home() {
                   Intimate music shows that revolve around storytelling and creative curation. Small rooms, artists up close, no spectacle.
                 </p>
               </div>
+              <div className="mt-8 flex items-center justify-center pt-2">
+                <MadrasSessionsIllustration />
+              </div>
             </div>
 
             {/* Format 02: Vinyl Listening Sessions */}
@@ -191,6 +202,9 @@ export default function Home() {
                 <p className="max-w-md text-pretty text-sm leading-relaxed text-muted-foreground">
                   A room, a record and nothing else. We play albums in full on vinyl and listen together, one edition at a time.
                 </p>
+              </div>
+              <div className="mt-8 flex items-center justify-center pt-2">
+                <VinylListeningIllustration />
               </div>
             </div>
           </div>
@@ -329,16 +343,12 @@ export default function Home() {
 
         {/* Collaborate Section */}
         <section id="collaborate" className="animate-reveal grid grid-cols-1 gap-12 py-24 md:grid-cols-12">
-          <div className="md:col-span-5">
-            <img
-              src="/assets/artist-invite.jpg"
-              alt="Hand adjusting a synthesizer in low light"
-              loading="lazy"
-              width="832"
-              height="1024"
-              className="aspect-[4/5] w-full object-cover outline-1 -outline-offset-1 outline-foreground/5"
-            />
+          {/* Stage Illustration */}
+          <div className="md:col-span-5 flex items-center justify-center">
+            <StageIllustration />
+
           </div>
+
           <div className="flex flex-col justify-center md:col-span-7">
             {/* <span className="mb-6 font-mono text-xs uppercase text-accent">Artist Registry</span> */}
             <p
