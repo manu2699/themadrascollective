@@ -20,6 +20,37 @@ export interface CollectionItem {
   };
 }
 
+export interface UpcomingSession {
+  id: string;
+  date: string;
+  category: "LISTENING" | "SESSION";
+  title: string;
+  description: string;
+  venue: string;
+  link: string;
+}
+
+export const UPCOMING_SESSIONS: UpcomingSession[] = [
+  {
+    id: "ar-rahman-edition",
+    date: "21 Nov",
+    category: "LISTENING",
+    title: "A.R. Rahman Edition",
+    description: "Vinyl listening session. The Nuke, Alwarpet.",
+    venue: "The Nuke, Alwarpet",
+    link: "https://www.instagram.com/the_madras_collective_/",
+  },
+  {
+    id: "madras-sessions-vol-02",
+    date: "5 Dec",
+    category: "SESSION",
+    title: "Madras Sessions Vol 02: The Kaadhalist",
+    description: "Live at The Nuke, Alwarpet.",
+    venue: "The Nuke, Alwarpet",
+    link: "https://www.instagram.com/the_madras_collective_/",
+  },
+];
+
 export const COLLECTIONS: CollectionItem[] = [
   {
     volume: "VOLUME 01",
@@ -61,14 +92,14 @@ export const COLLECTIONS: CollectionItem[] = [
   },
   {
     volume: "VOLUME 02",
-    slug: "coming-soon",
-    title: "Coming Soon",
+    slug: "the-kaadhalist",
+    title: "Madras Sessions Vol 02",
     subtitle: "",
-    artist: "TBD",
-    location: "TBD",
+    artist: "The Kaadhalist",
+    location: "The Nuke, Alwarpet",
     image: null,
-    description: "--",
-    time: "July-Aug 2026",
+    description: "Live at The Nuke, Alwarpet.",
+    time: "5 Dec 2026",
     active: false,
   },
 ];
