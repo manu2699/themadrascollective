@@ -15,7 +15,7 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: "The Madras Collective",
-  description: "An artist-first music collective in Chennai curating intimate, experimental listening experiences. Music as the protagonist, not consumption.",
+  description: "An artist-first music collective in Madras curating intimate, experimental listening experiences. Music as the protagonist, not consumption.",
   authors: [{ name: "Lovable" }],
 };
 

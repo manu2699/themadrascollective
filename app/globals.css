@@ -75,6 +75,66 @@
   animation: marquee 55s linear infinite;
 }
 
+/* ── Ambient Floating Animations for Hero Elements ── */
+@keyframes float-slow {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(1deg);
+  }
+  100% {
+    transform: translateY(4px) rotate(-1deg);
+  }
+}
+
+@keyframes float-medium {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-11px) rotate(-1.5deg);
+  }
+  100% {
+    transform: translateY(5px) rotate(1deg);
+  }
+}
+
+@keyframes float-gentle {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-6px) rotate(0.8deg);
+  }
+  100% {
+    transform: translateY(3px) rotate(-0.5deg);
+  }
+}
+
+.animate-float-slow {
+  animation: float-slow 7s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+.animate-float-medium {
+  animation: float-medium 5.5s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+.animate-float-gentle {
+  animation: float-gentle 8s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-float-slow,
+  .animate-float-medium,
+  .animate-float-gentle {
+    animation: none !important;
+  }
+}
+
 body {
   background: var(--background);
   color: var(--foreground);

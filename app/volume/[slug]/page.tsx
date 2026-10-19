@@ -195,7 +195,7 @@ export default async function VolumePage({ params }: PageProps) {
           </div>
 
           <div className="text-right font-mono text-[10px] uppercase text-muted-foreground">
-            Chennai, India
+            Madras, India
             <br />
             EST. 2026 © All Rights Reserved
           </div>

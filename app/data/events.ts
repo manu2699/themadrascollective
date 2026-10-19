@@ -57,7 +57,7 @@ export const COLLECTIONS: CollectionItem[] = [
     slug: "darbuka-siva",
     title: "Maruvarthai Pesadhey",
     artist: "Darbuka Siva",
-    location: "Museum Theater, Chennai",
+    location: "Museum Theater, Madras",
     image: "/assets/vol_01_04.jpeg",
     description: "An Intimate musical experience with Darbuka Siva",
     time: "Jan 2026",
@@ -66,7 +66,7 @@ export const COLLECTIONS: CollectionItem[] = [
       curatorNote: "One of its kind, the show unfolded in three acts, through an experimental approach, it explored the connections between global music and the evolution of Tamil cinema music, presenting the journey through a compelling narrative. The performance was warmly received by audiences, playing to an almost full house and earning enthusiastic appreciation.",
       duration: "90 minutes",
       capacity: "500 seats",
-      locationFull: "Museum Theater, Egmore, Chennai",
+      locationFull: "Museum Theater, Egmore, Madras",
       credits: [
         { role: "Primary Artist", name: "Darbuka Siva" },
         { role: "Curatorial Direction", name: "The Madras Collective" }

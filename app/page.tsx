@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { COLLECTIONS, UPCOMING_SESSIONS } from "./data/events";
 import StageIllustration from "./components/StageIllustration";
-import ReelToReelIllustration from "./components/ReelToReelIllustration";
+import HeroFloatingElements from "./components/HeroFloatingElements";
 import MadrasSessionsIllustration from "./components/MadrasSessionsIllustration";
 import VinylListeningIllustration from "./components/VinylListeningIllustration";
 
@@ -39,9 +39,9 @@ export default function Home() {
 
       <main className="mx-auto max-w-6xl px-4">
         {/* Manifesto Section */}
-        <section id="manifesto" className="grid grid-cols-1 gap-8 border-b border-border py-24 md:grid-cols-12">
+        <section id="manifesto" className="relative grid grid-cols-1 gap-8 border-b border-border py-24 md:grid-cols-12 overflow-hidden">
           <div className="md:col-span-8">
-            <div className="flex flex-wrap gap-2 sm:gap-8 md:gap-16 items-center mb-4">
+            {/* <div className="flex flex-wrap gap-2 sm:gap-8 md:gap-16 items-center mb-4">
               {tagLines.map((line, idx) => (
                 <div key={idx} className="flex flex-row gap-1 items-center">
                   <span
@@ -60,16 +60,16 @@ export default function Home() {
 
                 </div>
               ))}
-            </div>
+            </div> */}
             <h1 className="animate-reveal font-display text-3xl sm:text-5xl  leading-[0.85] tracking-tighter md:text-7xl">
               Building an <br /> intentional <br /> listening culture <br />
-              in Chennai.
+              in Madras.
             </h1>
             <p
               className="animate-reveal mt-8 max-w-md text-pretty text text-muted-foreground"
               style={{ animationDelay: "150ms" }}
             >
-              {/* We facilitate the hush before the first note. In a culture of consumption, we curate meaningful intersections between artist and listener in Chennai. No hype. No spectacle. Just sound. */}
+              {/* We facilitate the hush before the first note. In a culture of consumption, we curate meaningful intersections between artist and listener in Madras. No hype. No spectacle. Just sound. */}
               Intimate music shows and vinyl listening sessions, built around storytelling and creative curation.
             </p>
           </div>
@@ -77,9 +77,9 @@ export default function Home() {
             className="animate-reveal flex flex-col items-end justify-between gap-8 md:col-span-4"
             style={{ animationDelay: "200ms" }}
           >
-            <div className="w-full flex items-center justify-center md:justify-end">
-              <ReelToReelIllustration />
-            </div>
+            {/* <div className="w-full flex items-center justify-center md:justify-end">
+              <HeroFloatingElements />
+            </div> */}
 
             <div className="border-l border-border pl-4 text-right font-mono text-[11px] leading-relaxed">
               <a href="#manifesto" className="block hover:text-accent">(00) MANIFESTO</a>
@@ -406,7 +406,7 @@ export default function Home() {
             </div>
           </div>
           <div className="text-right font-mono text-[10px] uppercase text-muted-foreground">
-            Chennai, India<br />EST. 2026 © All Rights Reserved
+            Madras, India<br />EST. 2026 © All Rights Reserved
           </div>
         </div>
       </footer>

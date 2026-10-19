@@ -101,7 +101,7 @@ export default function Contact() {
 
               <div>
                 <h3 className="mb-3 font-mono text-[10px] uppercase text-muted-foreground">Location</h3>
-                <p className="font-mono text-sm uppercase tracking-tight">Chennai, India</p>
+                <p className="font-mono text-sm uppercase tracking-tight">Madras, India</p>
               </div>
             </div>
           </div>
@@ -247,7 +247,7 @@ export default function Contact() {
           </div>
 
           <div className="text-right font-mono text-[10px] uppercase text-muted-foreground">
-            Chennai, India<br />EST. 2023 © All Rights Reserved
+            Madras, India<br />EST. 2023 © All Rights Reserved
           </div>
         </div>
       </footer>
