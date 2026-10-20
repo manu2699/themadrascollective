@@ -162,7 +162,7 @@ export default function Home() {
                   Madras Sessions
                 </h3>
                 <p className="max-w-md text-pretty text-sm leading-relaxed text-muted-foreground">
-                  Intimate music shows that revolve around storytelling and creative curation. Small rooms, artists up close, no spectacle.
+                  Intimate music shows that revolve around storytelling and creative curation.
                 </p>
               </div>
               <div className="mt-8 flex items-center justify-center pt-2">
