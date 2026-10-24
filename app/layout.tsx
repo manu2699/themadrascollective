@@ -19,7 +19,10 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL
   ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
   : process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
-  : "https://themadrascollective.com";
+  : "https://themadrascollective.art";
+
+const siteDescription =
+  "Building an intentional listening culture in Madras. Intimate music shows and vinyl listening sessions, built around storytelling and creative curation.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -27,8 +30,7 @@ export const metadata: Metadata = {
     default: "The Madras Collective",
     template: "%s | The Madras Collective",
   },
-  description:
-    "An artist-first music collective in Madras curating intimate, experimental listening experiences. Music as the protagonist, not consumption.",
+  description: siteDescription,
   applicationName: "The Madras Collective",
   authors: [{ name: "The Madras Collective" }],
   creator: "The Madras Collective",
@@ -45,8 +47,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "The Madras Collective",
-    description:
-      "An artist-first music collective in Madras curating intimate, experimental listening experiences. Music as the protagonist, not consumption.",
+    description: siteDescription,
     url: "/",
     siteName: "The Madras Collective",
     images: [
@@ -64,8 +65,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "The Madras Collective",
-    description:
-      "An artist-first music collective in Madras curating intimate, experimental listening experiences. Music as the protagonist, not consumption.",
+    description: siteDescription,
     images: ["/og-image.jpg"],
   },
 };
