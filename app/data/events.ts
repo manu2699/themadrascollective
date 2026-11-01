@@ -42,11 +42,20 @@ export const UPCOMING_SESSIONS: UpcomingSession[] = [
   },
   {
     id: "madras-sessions-vol-02",
-    date: "5 Dec",
+    date: "29 Nov",
     category: "SESSION",
     title: "Madras Sessions Vol 02: The Kaadhalist",
     description: "Live at The Nook, Alwarpet.",
     venue: "The Nook, Alwarpet",
+    link: "https://www.instagram.com/the_madras_collective_/",
+  },
+  {
+    id: "cigarettes-after-sex-edition",
+    date: "18 Dec",
+    category: "LISTENING",
+    title: "Cigarettes After Sex Edition",
+    description: "Vinyl listening session, live at Origami - The Asian Bar, Palavakkam.",
+    venue: "Origami - The Asian Bar, Palavakkam",
     link: "https://www.instagram.com/the_madras_collective_/",
   },
 ];
@@ -99,7 +108,7 @@ export const COLLECTIONS: CollectionItem[] = [
     location: "The Nook, Alwarpet",
     image: null,
     description: "Live at The Nook, Alwarpet.",
-    time: "5 Dec 2026",
+    time: "29 Nov 2026",
     active: false,
   },
 ];

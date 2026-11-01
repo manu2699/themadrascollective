@@ -1,7 +1,9 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useSyncExternalStore } from "react";
 import { createPortal } from "react-dom";
+
+const emptySubscribe = () => () => {};
 
 interface LightboxModalProps {
   isOpen: boolean;
@@ -22,12 +24,11 @@ export default function LightboxModal({
   onPrev,
   onSelectImage,
 }: LightboxModalProps) {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-    return () => setMounted(false);
-  }, []);
+  const mounted = useSyncExternalStore(
+    emptySubscribe,
+    () => true,
+    () => false
+  );
 
   // Keyboard navigation inside the lightbox
   useEffect(() => {

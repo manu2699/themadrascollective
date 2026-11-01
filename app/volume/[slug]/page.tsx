@@ -2,6 +2,8 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { COLLECTIONS } from "../../data/events";
 import GalleryCarousel from "../../components/GalleryCarousel";
+import Navbar from "../../components/layout/Navbar";
+import Footer from "../../components/layout/Footer";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -26,19 +28,7 @@ export default async function VolumePage({ params }: PageProps) {
   return (
     <div className="min-h-screen bg-background text-foreground flex flex-col justify-between">
       <div>
-        {/* Navigation */}
-        <nav className="sticky top-0 z-50 border-b border-border bg-background/80 px-4 py-3 backdrop-blur-md">
-          <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-x-4 gap-y-2">
-            <div className="font-display text-xl sm:text-2xl uppercase tracking-tighter">
-              <Link href="/">The Madras Collective</Link>
-            </div>
-            <div className="font-mono text-[10px] uppercase tracking-tighter">
-              <Link href="/" className="hover:text-accent">
-                Index / 2026 Edition
-              </Link>
-            </div>
-          </div>
-        </nav>
+        <Navbar />
 
         <main className="mx-auto max-w-6xl px-4">
           {/* Back button */}
@@ -153,54 +143,7 @@ export default async function VolumePage({ params }: PageProps) {
         </main>
       </div>
 
-      {/* Footer */}
-      <footer className="border-t border-border px-4 py-12 mt-12 bg-background">
-        <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-8 md:flex-row">
-          <div className="font-display text-4xl uppercase leading-none tracking-tighter">
-            The Madras <br /> Collective
-          </div>
-
-          <div className="grid grid-cols-2 gap-16">
-            <div>
-              <h4 className="mb-4 font-mono text-[10px] uppercase text-muted-foreground">Navigation</h4>
-              <ul className="space-y-2 font-mono text-[11px] uppercase tracking-tight">
-                <li>
-                  <Link href="/" className="hover:text-accent">
-                    Index
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/" className="hover:text-accent">
-                    Archive
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/contact" className="hover:text-accent">
-                    Contact
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="mb-4 font-mono text-[10px] uppercase text-muted-foreground">Social</h4>
-              <ul className="space-y-2 font-mono text-[11px] uppercase tracking-tight">
-                <li>
-                  <a href="https://www.instagram.com/the_madras_collective_/" target="_blank" rel="noreferrer" className="hover:text-accent">
-                    Instagram
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="text-right font-mono text-[10px] uppercase text-muted-foreground">
-            Madras, India
-            <br />
-            EST. 2026 © All Rights Reserved
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
