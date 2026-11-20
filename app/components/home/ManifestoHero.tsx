@@ -9,14 +9,13 @@ export default function ManifestoHero() {
     >
       <div className="md:col-span-8">
         <h1 className="animate-reveal font-display text-3xl sm:text-5xl leading-[0.85] tracking-tighter md:text-7xl">
-          Building an <br /> intentional <br /> listening culture <br />
-          in Madras.
+          Building a <br /> culture <br /> around experiencing music. <br />
         </h1>
         <p
           className="animate-reveal mt-8 max-w-md text-pretty text-muted-foreground"
           style={{ animationDelay: "150ms" }}
         >
-          Intimate music shows and vinyl listening sessions, built around storytelling and creative curation.
+          We bring people together through curated musical experiences, from intimate performances and listening sessions to unexpected musical gatherings in extraordinary spaces.
         </p>
       </div>
 

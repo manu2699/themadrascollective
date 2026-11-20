@@ -16,13 +16,13 @@ const jetbrainsMono = JetBrains_Mono({
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL
   ? process.env.NEXT_PUBLIC_SITE_URL
   : process.env.VERCEL_PROJECT_PRODUCTION_URL
-  ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
-  : process.env.VERCEL_URL
-  ? `https://${process.env.VERCEL_URL}`
-  : "https://themadrascollective.art";
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+    : process.env.VERCEL_URL
+      ? `https://${process.env.VERCEL_URL}`
+      : "https://themadrascollective.art";
 
 const siteDescription =
-  "Building an intentional listening culture in Madras. Intimate music shows and vinyl listening sessions, built around storytelling and creative curation.";
+  "Building a culture around experiencing music. We bring people together through curated musical experiences, from intimate performances and listening sessions to unexpected musical gatherings in extraordinary spaces.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

@@ -21,7 +21,7 @@ export const FOOTER_NAV_LINKS: NavLink[] = [
 export const MARQUEE_ITEMS: string[] = [
   "Intimate Music Shows",
   "Vinyl Listening Sessions",
-  "Storytelling",
+  "Musical Gatherings",
   "Creative Curation",
 ];
 
