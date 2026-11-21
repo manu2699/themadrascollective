@@ -50,6 +50,15 @@ export const UPCOMING_SESSIONS: UpcomingSession[] = [
     link: "https://www.instagram.com/the_madras_collective_/",
   },
   {
+    id: "billy-joel-edition",
+    date: "12 Dec",
+    category: "LISTENING",
+    title: "Billy Joel Edition",
+    description: "Vinyl listening session. Brew'd, Palavakkam.",
+    venue: "Brew'd, Palavakkam",
+    link: "https://www.instagram.com/the_madras_collective_/",
+  },
+  {
     id: "cigarettes-after-sex-edition",
     date: "18 Dec",
     category: "LISTENING",

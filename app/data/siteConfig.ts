@@ -22,7 +22,7 @@ export const MARQUEE_ITEMS: string[] = [
   "Intimate Music Shows",
   "Vinyl Listening Sessions",
   "Musical Gatherings",
-  "Creative Curation",
+  // "Creative Curation",
 ];
 
 export const SITE_METADATA = {

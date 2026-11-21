@@ -9,7 +9,7 @@ export default function ManifestoHero() {
     >
       <div className="md:col-span-8">
         <h1 className="animate-reveal font-display text-3xl sm:text-5xl leading-[0.85] tracking-tighter md:text-7xl">
-          Building a <br /> culture <br /> around experiencing music. <br />
+          Building a <br /> culture around <br /> experiencing music. <br />
         </h1>
         <p
           className="animate-reveal mt-8 max-w-md text-pretty text-muted-foreground"
