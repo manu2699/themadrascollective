@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { COLLECTIONS } from "../../data/events";
 import GalleryCarousel from "../../components/GalleryCarousel";
+import InstagramEmbed from "../../components/InstagramEmbed";
 import Navbar from "../../components/layout/Navbar";
 import Footer from "../../components/layout/Footer";
 
@@ -63,16 +64,22 @@ export default async function VolumePage({ params }: PageProps) {
                 <span className="block font-mono text-[10px] uppercase text-muted-foreground">Location</span>
                 <span className="font-mono text-xs uppercase font-medium">{details.locationFull}</span>
               </div>
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <span className="block font-mono text-[10px] uppercase text-muted-foreground">Duration</span>
-                  <span className="font-mono text-xs uppercase font-medium">{details.duration}</span>
+              {(details.duration || details.capacity) && (
+                <div className="grid grid-cols-2 gap-4">
+                  {details.duration && (
+                    <div>
+                      <span className="block font-mono text-[10px] uppercase text-muted-foreground">Duration</span>
+                      <span className="font-mono text-xs uppercase font-medium">{details.duration}</span>
+                    </div>
+                  )}
+                  {details.capacity && (
+                    <div>
+                      <span className="block font-mono text-[10px] uppercase text-muted-foreground">Capacity</span>
+                      <span className="font-mono text-xs uppercase font-medium">{details.capacity}</span>
+                    </div>
+                  )}
                 </div>
-                <div>
-                  <span className="block font-mono text-[10px] uppercase text-muted-foreground">Capacity</span>
-                  <span className="font-mono text-xs uppercase font-medium">{details.capacity}</span>
-                </div>
-              </div>
+              )}
             </div>
           </section>
 
@@ -80,7 +87,22 @@ export default async function VolumePage({ params }: PageProps) {
           <section className="grid grid-cols-1 gap-12 py-16 md:grid-cols-12">
             {/* Left side: Gallery/Media & Curatorial note */}
             <div className="md:col-span-7 space-y-12">
-              {details.gallery && details.gallery.length > 0 ? (
+              {details.instagramReelUrl ? (
+                <div className="animate-reveal space-y-3" style={{ animationDelay: "100ms" }}>
+                  <InstagramEmbed
+                    url={details.instagramReelUrl}
+                    caption={`${collection.artist} — ${collection.title}`}
+                  />
+                  <a
+                    href={details.instagramReelUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block font-mono text-[10px] uppercase tracking-widest text-muted-foreground hover:text-accent"
+                  >
+                    Open on Instagram ↗
+                  </a>
+                </div>
+              ) : details.gallery && details.gallery.length > 0 ? (
                 <div className="animate-reveal" style={{ animationDelay: "100ms" }}>
                   <GalleryCarousel images={details.gallery} />
                 </div>
@@ -110,19 +132,21 @@ export default async function VolumePage({ params }: PageProps) {
             {/* Right side: Setlist & Project Credits */}
             <div className="md:col-span-5 space-y-12">
               {/* Program Structure */}
-              {/* <div className="animate-reveal space-y-4" style={{ animationDelay: "150ms" }}>
-                <h3 className="font-mono text-xs uppercase tracking-widest text-muted-foreground border-b border-border/40 pb-2">
-                  Program Structure
-                </h3>
-                <div className="divide-y divide-border/20 font-mono text-xs">
-                  {details.setlist.map((track, i) => (
-                    <div key={i} className="flex justify-between py-3">
-                      <span>{track.name}</span>
-                      <span className="text-muted-foreground">{track.duration}</span>
-                    </div>
-                  ))}
+              {details.setlist && details.setlist.length > 0 && (
+                <div className="animate-reveal space-y-4" style={{ animationDelay: "150ms" }}>
+                  <h3 className="font-mono text-xs uppercase tracking-widest text-muted-foreground border-b border-border/40 pb-2">
+                    Program
+                  </h3>
+                  <div className="divide-y divide-border/20 font-mono text-xs">
+                    {details.setlist.map((track, i) => (
+                      <div key={i} className="flex justify-between gap-4 py-3">
+                        <span>{track.name}</span>
+                        <span className="shrink-0 text-muted-foreground">{track.duration}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              </div> */}
+              )}
 
               {/* Project Credits */}
               <div className="animate-reveal space-y-4" style={{ animationDelay: "250ms" }}>
