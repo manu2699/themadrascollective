@@ -3,6 +3,7 @@ import Link from "next/link";
 import { COLLECTIONS } from "../../data/events";
 import GalleryCarousel from "../../components/GalleryCarousel";
 import InstagramEmbed from "../../components/InstagramEmbed";
+import LazyVideoPlayer from "../../components/LazyVideoPlayer";
 import Navbar from "../../components/layout/Navbar";
 import Footer from "../../components/layout/Footer";
 
@@ -87,7 +88,24 @@ export default async function VolumePage({ params }: PageProps) {
           <section className="grid grid-cols-1 gap-12 py-16 md:grid-cols-12">
             {/* Left side: Gallery/Media & Curatorial note */}
             <div className="md:col-span-7 space-y-12">
-              {details.instagramReelUrl ? (
+              {details.videoUrl ? (
+                <div className="animate-reveal space-y-3" style={{ animationDelay: "100ms" }}>
+                  <LazyVideoPlayer
+                    src={details.videoUrl}
+                    title={`${collection.artist} - ${collection.title}`}
+                  />
+                  {details.instagramReelUrl && (
+                    <a
+                      href={details.instagramReelUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block font-mono text-[10px] uppercase tracking-widest text-muted-foreground hover:text-accent"
+                    >
+                      Open on Instagram ↗
+                    </a>
+                  )}
+                </div>
+              ) : details.instagramReelUrl ? (
                 <div className="animate-reveal space-y-3" style={{ animationDelay: "100ms" }}>
                   <InstagramEmbed
                     url={details.instagramReelUrl}
