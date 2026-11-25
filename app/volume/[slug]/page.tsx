@@ -10,7 +10,7 @@ interface PageProps {
 }
 
 export async function generateStaticParams() {
-  return COLLECTIONS.filter((item) => item.active).map((item) => ({
+  return COLLECTIONS.filter((item) => item.active && item.details).map((item) => ({
     slug: item.slug,
   }));
 }

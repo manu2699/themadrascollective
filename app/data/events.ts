@@ -9,6 +9,7 @@ export interface CollectionItem {
   description: string;
   time: string;
   active: boolean;
+  externalUrl?: string;
   details?: {
     curatorNote: string;
     duration: string;
@@ -31,15 +32,6 @@ export interface UpcomingSession {
 }
 
 export const UPCOMING_SESSIONS: UpcomingSession[] = [
-  {
-    id: "ar-rahman-edition",
-    date: "21 Nov",
-    category: "LISTENING",
-    title: "A.R. Rahman Edition",
-    description: "Vinyl listening session. The Nook, Alwarpet.",
-    venue: "The Nook, Alwarpet",
-    link: "https://www.instagram.com/the_madras_collective_/",
-  },
   {
     id: "madras-sessions-vol-02",
     date: "29 Nov",
@@ -107,6 +99,18 @@ export const COLLECTIONS: CollectionItem[] = [
         "/assets/vol_01_09.jpeg",
       ]
     },
+  },
+  {
+    volume: "LISTENING 01",
+    slug: "ar-rahman-edition",
+    title: "Vinyl Listening Session",
+    artist: "A.R. Rahman",
+    location: "The Nook, Alwarpet",
+    image: null,
+    description: "Vinyl listening session. The Nook, Alwarpet.",
+    time: "Nov 2026",
+    active: true,
+    externalUrl: "https://www.instagram.com/reel/DgF1_b9BOW6/?fqnt=MTBoN3g5MjQ4eXpxdQ==",
   },
   {
     volume: "VOLUME 02",
