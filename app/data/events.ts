@@ -113,7 +113,7 @@ export const COLLECTIONS: CollectionItem[] = [
     active: true,
     details: {
       curatorNote:
-        "An intimate deep-listening vinyl session dedicated to the timeless discography of A.R. Rahman at The Nook, Alwarpet. Played on vinyl in a quiet, distraction-free room, the evening revisited three of his all-time hit Tamil soundtracks: Thiruda Thiruda (1993), Alaipayuthey (2000), and Kandukondain Kandukondain (2000), tracing Rahman's journey from his trailblazing early-90s sonic experiments to his turn-of-the-millennium romantic and classical masterpieces.",
+        "An intimate vinyl listening session dedicated to the timeless discography of A.R. Rahman at The Nook, Alwarpet. Played on vinyl in a quiet, distraction-free room, the evening revisited three of his all-time hit Tamil soundtracks: Thiruda Thiruda (1993), Alaipayuthey (2000), and Kandukondain Kandukondain (2000), tracing Rahman's journey from his trailblazing early-90s sonic experiments to his turn-of-the-millennium romantic and classical masterpieces.",
       locationFull: "The Nook, Alwarpet, Madras",
       videoUrl: "/assets/videos/ar-rahman-reel-01.mp4",
       instagramReelUrl: "https://www.instagram.com/reel/DgF1_b9BOW6/?fqnt=MTBoN3g5MjQ4eXpxdQ==",

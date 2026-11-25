@@ -153,7 +153,7 @@ export default async function VolumePage({ params }: PageProps) {
               {details.setlist && details.setlist.length > 0 && (
                 <div className="animate-reveal space-y-4" style={{ animationDelay: "150ms" }}>
                   <h3 className="font-mono text-xs uppercase tracking-widest text-muted-foreground border-b border-border/40 pb-2">
-                    Program
+                    {collection.volume.startsWith("LISTENING") ? "Albums" : "Program"}
                   </h3>
                   <div className="divide-y divide-border/20 font-mono text-xs">
                     {details.setlist.map((track, i) => (

@@ -32,7 +32,7 @@ export default function LazyVideoPlayer({ src, title }: LazyVideoPlayerProps) {
   return (
     <div
       ref={containerRef}
-      className="w-full max-w-[420px] overflow-hidden border border-border bg-black"
+      className="w-full overflow-hidden border border-border bg-black"
     >
       <video
         src={shouldLoad ? src : undefined}
@@ -40,7 +40,7 @@ export default function LazyVideoPlayer({ src, title }: LazyVideoPlayerProps) {
         controls
         playsInline
         preload="metadata"
-        className="aspect-[9/16] w-full bg-black object-contain"
+        className="block h-auto w-full bg-black"
       />
     </div>
   );
